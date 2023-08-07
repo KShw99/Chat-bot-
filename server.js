@@ -36,8 +36,12 @@ app.listen(port, () => {
 
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'C:\Users\Duy\Desktop\Skeleton\public\index.html')));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
+
+  
