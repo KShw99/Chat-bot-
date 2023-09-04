@@ -8,10 +8,11 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-const apiURL ='https://official-joke-api.appspot.com/random_joke'
 
 app.post('/fetch', async (req,res) => {
     try {
+        const { keyword } = req.body;
+        const apiURL = `http://localhost:8000/predict/${keyword}`
         const response = await axios.get(apiURL);
         const data = response.data
 
@@ -24,6 +25,7 @@ app.post('/fetch', async (req,res) => {
                 res.send('Data fetch and saved successful')
             }
         });
+
     } catch (error) {
         console.error('Error fetching data:', error);
         res.status(500).send('Error fetching data from API')

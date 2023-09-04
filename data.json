@@ -1,6 +1,4 @@
 {
-  "type": "general",
-  "setup": "Did you hear the one about the guy with the broken hearing aid?",
-  "punchline": "Neither did he.",
-  "id": 101
+  "Prediction": "SUCCESS",
+  "prob": 0.9999999510334678
 }
